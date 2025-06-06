@@ -1,1 +1,14 @@
+name: First Workflowtest CI
 
+on: push
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+     - run: echo 'build'
+
+ test:
+    runs-on: windows-latest
+    steps:
+      - run: echo 'test'
