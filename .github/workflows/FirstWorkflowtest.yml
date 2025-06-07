@@ -3,8 +3,8 @@ name: First Workflowtest CI
 on: 
   push:
    branches:
-    -feature1
-    - !main
+    -'feature1'
+    -'!main'
 
 jobs:
  build:
