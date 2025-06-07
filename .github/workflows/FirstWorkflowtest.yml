@@ -3,14 +3,18 @@ name: First Workflowtest CI
 on: 
   push:
    branches:
-    - feature1
-    - ! main
+    - 'feature1'
+    - 'main'
 
 jobs:
  build:
    runs-on: ubuntu-latest
    steps:
-     - run: echo 'build'
+     - name: Setup Java JDK
+       uses: actions/setup-java@v4.6.0
+       with: 
+         java-version: '17'
+         distribution: 'microsoft'
 
  test:
     runs-on: windows-latest
