@@ -1,6 +1,6 @@
 name: Build and push
 env:
- DOCKER_IMAGE: workflow
+ DOCKER_USERNAME: ${{vars.DOCKER_NAME}}
 on:
  push: 
   branches:
@@ -15,6 +15,6 @@ jobs:
      - name: Display
        env:
         DOCKER_IMAGE: steps
-       run: echo '${{env.DOCKER_IMAGE}}'
+       run: echo '${{env.DOCKER_USERNAME}}'
         
    
