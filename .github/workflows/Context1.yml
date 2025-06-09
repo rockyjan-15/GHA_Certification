@@ -1,0 +1,16 @@
+name: GitHub Context1
+run-name: ${{github.actor}}
+on:
+  push:
+   branches: 
+    - main
+jobs:
+    Github_context:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+      - name: Deploy only from main
+        if: github.ref == 'ref/heads/main'
+        run: echo 'Deploying to feature1 from main branch...'
+      
