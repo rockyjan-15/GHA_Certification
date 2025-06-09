@@ -1,0 +1,13 @@
+name: Node JS
+
+on:
+ pull_request:
+  types:
+   - opened
+  branches:
+   - main
+jobs:
+ build-node:
+  runs-on: ubuntu-latest
+steps:
+  -run: echo 'Run whenever PR is opened'
