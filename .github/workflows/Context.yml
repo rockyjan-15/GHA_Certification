@@ -6,8 +6,8 @@ jobs:
     Github_context:
      runs-on: ubuntu-latest
      steps:
-      -name: Display Info
-         run: |
+      - name: Display Info
+        run: |
           echo 'Event name ${{github.event}}'
           echo "Ref ${{github.ref}}"
           echo "SHA ${{github.sha}}"
