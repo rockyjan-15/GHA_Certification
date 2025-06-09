@@ -1,0 +1,16 @@
+name: Build and push
+env:
+ DOCKER_IMAGE: myapp
+on:
+ push: 
+  branches:
+   - main
+
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Display
+       run: echo '${{env.DOCKER_IMAGE}}'
+        
+   
