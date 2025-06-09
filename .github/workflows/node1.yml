@@ -9,5 +9,5 @@ on:
 jobs:
  build-node:
   runs-on: ubuntu-latest
-steps:
-  -run: echo 'Run whenever PR is opened'
+  steps:
+  - run: echo 'Run whenever PR is opened'
