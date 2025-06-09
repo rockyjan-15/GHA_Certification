@@ -1,6 +1,6 @@
 name: Build and push
 env:
- DOCKER_IMAGE: myapp
+ DOCKER_IMAGE: workflow
 on:
  push: 
   branches:
@@ -8,9 +8,13 @@ on:
 
 jobs:
    build:
+    env:
+     DOCKER_IMAGE: job
     runs-on: ubuntu-latest
     steps:
      - name: Display
+       env:
+        DOCKER_IMAGE: steps
        run: echo '${{env.DOCKER_IMAGE}}'
         
    
