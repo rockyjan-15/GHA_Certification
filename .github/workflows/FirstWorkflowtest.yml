@@ -17,6 +17,7 @@ jobs:
          distribution: 'microsoft'
 
  test:
-    runs-on: windows-latest
-    steps:
+  needs:  build_java
+  runs-on: windows-latest
+  steps:
       - run: echo 'test'
