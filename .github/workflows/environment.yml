@@ -1,0 +1,16 @@
+name: Environment with Inputs
+
+on:
+ workflow_dispatch:
+  inputs:
+   TARGET ENVIRONMENT:
+    type: environment
+    default: devex
+jobs:
+   build:
+      runs-on: ubuntu-latest
+      environment: ${{inputs.TARGET_ENVIRONMENT}}
+      steps:
+       - name: Display secret
+         run: echo 'Secret value is ${{secrets.TAR_SECRET}}'
+       
