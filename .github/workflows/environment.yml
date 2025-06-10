@@ -5,7 +5,7 @@ on:
   inputs:
    TARGET ENVIRONMENT:
     type: environment
-    default: devex
+    default: devexvar
 jobs:
    build:
       runs-on: ubuntu-latest
